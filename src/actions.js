@@ -15,4 +15,9 @@ export const toggleInfoModal = () => ({
     type: TOGGLE_INFO_MODAL
 });
 
-
+export const DO_SOMETHING = 'DO_SOMETHING';
+export const doSomething = () => ({
+    type: DO_SOMETHING,
+    num: 1,
+    color: "#"+((1<<24)*Math.random()|0).toString(16),
+});

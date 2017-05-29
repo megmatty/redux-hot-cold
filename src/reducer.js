@@ -1,14 +1,16 @@
 import {
     NEW_GAME,
     MAKE_GUESS,
-    TOGGLE_INFO_MODAL
+    TOGGLE_INFO_MODAL,
+    DO_SOMETHING
 } from './actions';
 
 const initialState = {
     guesses: [],
     feedback: 'Make your guess!',
     correctAnswer: Math.round(Math.random() * 100),
-    showInfoModal: false
+    showInfoModal: false,
+    color: null
 };
 
 export default (state, action) => {
@@ -26,7 +28,7 @@ export default (state, action) => {
             state = Object.assign({}, state, {
                 feedback: 'Please enter a valid number'
             });
-
+            // console.log(state);
             return state;
         }
 
@@ -60,6 +62,12 @@ export default (state, action) => {
          state = Object.assign({}, state, {
              showInfoModal: !state.showInfoModal
         });
+        return state;
+    } else if (action.type === DO_SOMETHING) {
+        state = Object.assign({}, state, {
+                color: action.color
+         });
+        console.log(action);
         return state;
     }
     return state;
