@@ -1,3 +1,5 @@
+//review with mentor - unable to complete this assignment independently
+//retyped solution
 import {
     NEW_GAME,
     newGame,

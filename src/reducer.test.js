@@ -1,3 +1,6 @@
+//review with mentor - unable to complete this assignment independently
+//retyped solution
+
 import reducer from './reducer';
 import {newGame, makeGuess, toggleInfoModal} from './actions'
 
